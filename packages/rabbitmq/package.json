@@ -1,0 +1,78 @@
+{
+  "name": "@nestx-log4js/rabbitmq",
+  "version": "0.0.1",
+  "description": "nestx-log4js rabbitmq appender",
+  "keywords": [
+    "rabbitmq",
+    "nestx",
+    "log4js",
+    "logger"
+  ],
+  "author": "aaroncui <aaroncui@tencent.com>",
+  "homepage": "https://github.com/nest-x/nestx-log4js#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nest-x/nestx-log4js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nest-x/nestx-log4js/issues"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.10.14",
+    "@nestjs/core": "^6.10.14",
+    "nestx-amqp": "^1.0.6",
+    "amqp-connection-manager": "^3.2.0",
+    "amqplib": "^0.5.5",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "6.14.2",
+    "@nestjs/schematics": "6.9.4",
+    "@nestjs/testing": "6.11.8",
+    "@types/amqp-connection-manager": "2.0.6",
+    "@types/amqplib": "0.5.13",
+    "@types/jest": "25.1.3",
+    "@types/node": "13.7.6",
+    "jest": "25.1.0",
+    "proxyquire": "^2.1.3",
+    "ts-jest": "25.2.1",
+    "ts-loader": "6.2.1",
+    "ts-node": "8.6.2",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "3.8.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/*.ts",
+      "!<rootDir>/src/__tests__/**/*.ts",
+      "!<rootDir>/src/shared/**/*.ts",
+      "!<rootDir>/src/index.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ],
+    "testEnvironment": "node",
+    "coverageDirectory": "<rootDir>/reports/coverage"
+  }
+}
