@@ -1,5 +1,5 @@
-import { EventEmitter } from 'events';
-import * as sinon from 'sinon';
+import { EventEmitter } from "events";
+import * as sinon from "sinon";
 
 export class FakeAMQP {
   private connection;
@@ -12,21 +12,21 @@ export class FakeAMQP {
   }
 
   kill() {
-    const err = new Error('Died in a fire');
-    this.connection.emit('error', err);
-    this.connection.emit('close', err);
+    const err = new Error("Died in a fire");
+    this.connection.emit("error", err);
+    this.connection.emit("close", err);
   }
 
   simulateRemoteClose() {
-    this.connection.emit('close', new Error('Connection closed'));
+    this.connection.emit("close", new Error("Connection closed"));
   }
 
   simulateRemoteBlock() {
-    this.connection.emit('blocked', new Error('Connection blocked'));
+    this.connection.emit("blocked", new Error("Connection blocked"));
   }
 
   simulateRemoteUnblock() {
-    this.connection.emit('unblocked');
+    this.connection.emit("unblocked");
   }
 
   connect() {}
@@ -36,13 +36,13 @@ export class FakeAMQP {
     this.url = null;
     this.failConnections = false;
     this.deadServers = [];
-    this.connect = sinon.spy((url) => {
+    this.connect = sinon.spy(url => {
       if (this.failConnections) {
-        return Promise.reject(new Error('No'));
+        return Promise.reject(new Error("No"));
       }
 
       let allowConnection = true;
-      this.deadServers.forEach((deadUrl) => {
+      this.deadServers.forEach(deadUrl => {
         if (url.startsWith(deadUrl)) {
           allowConnection = false;
         }
@@ -60,14 +60,16 @@ export class FakeAMQP {
 export class FakeConfirmChannel extends EventEmitter {
   constructor() {
     super();
-    this.publish = sinon.spy((exchange, routingKey, content, options, callback) => {
-      this.emit('publish', content);
-      callback(null);
-      return true;
-    });
+    this.publish = sinon.spy(
+      (exchange, routingKey, content, options, callback) => {
+        this.emit("publish", content);
+        callback(null);
+        return true;
+      }
+    );
 
     this.sendToQueue = sinon.spy((queue, content, options, callback) => {
-      this.emit('sendToQueue', content);
+      this.emit("sendToQueue", content);
       callback(null);
       return true;
     });
@@ -86,7 +88,7 @@ export class FakeConfirmChannel extends EventEmitter {
 
     this.assertExchange = sinon.spy(function(exchange, type, options) {});
 
-    this.close = sinon.spy(() => this.emit('close'));
+    this.close = sinon.spy(() => this.emit("close"));
   }
 
   publish() {}
@@ -135,10 +137,10 @@ export class FakeAmqpConnectionManager extends EventEmitter {
   }
 
   simulateConnect() {
-    const url = 'amqp://localhost';
+    const url = "amqp://localhost";
     this._currentConnection = new exports.FakeConnection(url);
     this.connected = true;
-    this.emit('connect', {
+    this.emit("connect", {
       connection: this._currentConnection,
       url
     });
@@ -147,8 +149,8 @@ export class FakeAmqpConnectionManager extends EventEmitter {
   simulateDisconnect() {
     this._currentConnection = null;
     this.connected = false;
-    this.emit('disconnect', {
-      err: new Error('Boom!')
+    this.emit("disconnect", {
+      err: new Error("Boom!")
     });
   }
 }

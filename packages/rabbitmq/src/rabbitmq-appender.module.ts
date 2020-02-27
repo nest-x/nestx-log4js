@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
 
 @Module({})
-export class RabbitmqAppenderModule {
-
-}
+export class RabbitmqAppenderModule {}
