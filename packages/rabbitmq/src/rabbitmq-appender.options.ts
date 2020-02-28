@@ -16,13 +16,13 @@ export interface RabbitmqChannelOptions {
 }
 
 export interface RabbitmqLoggerOptions {
-  type: '@nestx-log4js/rabbitmq';
+  type?: '@nestx-log4js/rabbitmq';
   layout?: Layout;
 }
 
 export type RabbitmqAppenderOptions = RabbitmqConnectionOptions & RabbitmqChannelOptions & RabbitmqLoggerOptions;
 
-export interface RabbitmqAppenderAsyncConnectionOptions extends Pick<ModuleMetadata, 'imports'> {
+export interface RabbitmqAppenderAsyncOptions extends Pick<ModuleMetadata, 'imports'> {
   inject?: any[];
   useFactory?: (...args) => RabbitmqAppenderOptions | Promise<RabbitmqAppenderOptions>;
 }
