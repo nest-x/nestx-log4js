@@ -3,12 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
+    "bootstrap": "lerna bootstrap",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest --forceExit",
-    "test:watch": "jest --watch",
     "test:cov": "jest --coverage --forceExit",
     "release": "semantic-release"
   },

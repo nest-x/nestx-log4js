@@ -15,6 +15,7 @@ jobs:
       - name: Install Dependencies and Build
         run: |
           yarn
+          yarn bootstrap
           yarn test:cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.0.2

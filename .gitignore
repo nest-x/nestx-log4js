@@ -36,3 +36,6 @@ lerna-debug.log*
 
 # Node
 yarn.lock
+
+# Coverage Reports
+reports
