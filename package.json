@@ -11,17 +11,17 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "@nestjs/common": "6.11.11",
-    "@nestjs/core": "6.11.11",
-    "@nestjs/platform-express": "6.11.11",
+    "@nestjs/common": "7.0.1",
+    "@nestjs/core": "7.0.1",
+    "@nestjs/platform-express": "7.0.1",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
     "rxjs": "6.5.4"
   },
   "devDependencies": {
-    "@nestjs/cli": "6.14.2",
+    "@nestjs/cli": "7.0.0",
     "@nestjs/schematics": "6.9.4",
-    "@nestjs/testing": "6.11.11",
+    "@nestjs/testing": "7.0.1",
     "@semantic-release/changelog": "5.0.0",
     "@semantic-release/git": "9.0.0",
     "@types/express": "4.17.3",
