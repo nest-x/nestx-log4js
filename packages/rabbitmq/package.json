@@ -29,8 +29,8 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
-    "@nestjs/common": "^6.10.14",
-    "@nestjs/core": "^6.10.14",
+    "@nestjs/common": "^7.0.0",
+    "@nestjs/core": "^7.0.0",
     "nestx-amqp": "^1.0.6",
     "amqp-connection-manager": "^3.2.0",
     "amqplib": "^0.5.5",
@@ -40,9 +40,9 @@
     "log4js": "^6.1.2"
   },
   "devDependencies": {
-    "@nestjs/cli": "6.14.2",
+    "@nestjs/cli": "7.0.0",
     "@nestjs/schematics": "6.9.4",
-    "@nestjs/testing": "6.11.11",
+    "@nestjs/testing": "7.0.1",
     "@types/amqp-connection-manager": "2.0.8",
     "@types/amqplib": "0.5.13",
     "@types/jest": "25.1.4",
