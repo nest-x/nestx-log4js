@@ -1141,10 +1141,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@nestjs/cli@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-7.0.0.tgz#46357944e2640f2211c6966e8131c995f80adbd6"
-  integrity sha512-UnEWryiiG2spaRdJ2h4sgvrpM93Fxx9i3vvCJWB7BoSQo9kJIgWK/Xsg5hhjtrK3oYsupEodMv1kGmHEYR/2dQ==
+"@nestjs/cli@7.0.2":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/cli/-/cli-7.0.2.tgz#7c43b5acf42fffc1adba9d1653309d93cd04667b"
+  integrity sha512-Y2lbEVP8GUd4KsfTMIt4RKEYP1DkFAyjIaD+BN6hTi57uFTbRcoAQhBAbaHQzZgGrV8sAL7DXaLF0QDuZ8l1Ww==
   dependencies:
     "@angular-devkit/core" "9.0.6"
     "@angular-devkit/schematics" "9.0.6"
@@ -1704,10 +1704,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.7.6.tgz#cb734a7c191472ae6a2b3a502b4dfffcea974113"
   integrity sha512-eyK7MWD0R1HqVTp+PtwRgFeIsemzuj4gBFSQxfPHY5iMjS7474e5wq+VFgTcdpyHeNxyKSaetYAjdMLJlKoWqA==
 
-"@types/node@13.9.1":
-  version "13.9.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.1.tgz#96f606f8cd67fb018847d9b61e93997dabdefc72"
-  integrity sha512-E6M6N0blf/jiZx8Q3nb0vNaswQeEyn0XlupO+xN6DtJ6r6IT4nXrTry7zhIfYvFCl3/8Cu6WIysmUBKiqV0bqQ==
+"@types/node@13.9.2":
+  version "13.9.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.2.tgz#ace1880c03594cc3e80206d96847157d8e7fa349"
+  integrity sha512-bnoqK579sAYrQbp73wwglccjJ4sfRdKU7WNEZ5FW4K2U6Kc0/eZ5kvXG0JKsEKFB50zrFmfFt52/cvBbZa7eXg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
