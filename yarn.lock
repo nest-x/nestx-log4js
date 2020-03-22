@@ -1169,20 +1169,20 @@
     webpack "4.42.0"
     webpack-node-externals "1.7.2"
 
-"@nestjs/common@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.0.4.tgz#4660df7eb1912fd2fdc037d9e49c248b322c2984"
-  integrity sha512-AhT0R74uBCj0zXDxqftR9QNPZ2cwGI7yVuZiLJsP78xUaaRMoRbfMxllB/Ax23hM98GYavoFGMNEQrXil2fjyw==
+"@nestjs/common@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-7.0.5.tgz#244069292d4bbdc338a6700e86e7775f2168260d"
+  integrity sha512-9h7FDyg3rSjztTe9mLhvdIeGpqoNf2uwpJIeyizRcQFAdQfJWiPsV2mRkt/VYdit+nrv6C1ADtvQD47qqUuj6A==
   dependencies:
     axios "0.19.2"
     cli-color "2.0.0"
     tslib "1.11.1"
     uuid "7.0.2"
 
-"@nestjs/core@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.0.4.tgz#5172737dbb160dad961611320c16135d8e05846a"
-  integrity sha512-ruNtOcS802SxRvBXiSpkRmsE6F2t0GpDtEcefhJxoq2e08lb7UVnruxArdsnBns94nJgLNHcjtE0fdsVFshclw==
+"@nestjs/core@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-7.0.5.tgz#6fc07527f7b1434cac088322c231539c8a41a416"
+  integrity sha512-imIkdGOeraURKLGAGB5UT/9Lz5Hvujn6wJ0ONEXb7MvbmkbmIe1K4Mj8hngQc9/PXMssslVE7tbFLNsiG2Rubg==
   dependencies:
     "@nuxtjs/opencollective" "0.2.2"
     fast-safe-stringify "2.0.7"
@@ -1192,10 +1192,10 @@
     tslib "1.11.1"
     uuid "7.0.2"
 
-"@nestjs/platform-express@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.0.4.tgz#78cbc3e850ee21d20d853ce882896d829d191e5c"
-  integrity sha512-tX/E2BFJcwnF0OUXn+qPOfiEcstj9Ic5PW1TMDvI/KNLYncrEXvNirRVaT1Rx3k6M7vFIhM2V4j77baCuVUhLQ==
+"@nestjs/platform-express@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-7.0.5.tgz#0c84487b0daa006b4062e60a404227cb911806a3"
+  integrity sha512-8o6+mTuIuOMJTwftS9y/bcFmnyp5uQMMZWSE7tjxdtPuQiZl7v0P00NdsUeBpwUmATJax07KH1zuSrcok57+KA==
   dependencies:
     body-parser "1.19.0"
     cors "2.8.5"
@@ -1212,10 +1212,10 @@
     "@angular-devkit/schematics" "9.0.6"
     fs-extra "8.1.0"
 
-"@nestjs/testing@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.0.4.tgz#8f2c02da4a193c6c93050063077a51011f8b4a24"
-  integrity sha512-hsTuDnJhhElzR0OUZB+qukJgOUGyaYUAfaQXTp3LbWq1QWvM/a6/ZmThcF/MrS9qkV25eSwn6x4/q9tTAGtobw==
+"@nestjs/testing@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.0.5.tgz#b6d6ee4de31669e87e231d18b73f2f76e358719c"
+  integrity sha512-pk30gGvgcymftm6PJELTSpOd9txYl11YgTwU1WOXjTtHxzYQscIMU2+eUi5JOZlKcC9/tVMZ5K/G6IxS9UWDPQ==
   dependencies:
     optional "0.1.4"
     tslib "1.11.1"
