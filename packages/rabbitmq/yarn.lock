@@ -512,10 +512,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@types/amqp-connection-manager@2.0.8":
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/@types/amqp-connection-manager/-/amqp-connection-manager-2.0.8.tgz#a53b049d6b8e24f72c963822a4238158d2dd05a1"
-  integrity sha512-GQasAK7KWooig0SC5pvMqqC4NEI0RiD+tRz6Zj4DIELG2uLxQ33cGH8PfQnq8qNYO1c9TR6XSvhZTgE5CUB0EA==
+"@types/amqp-connection-manager@2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@types/amqp-connection-manager/-/amqp-connection-manager-2.0.9.tgz#8112dde25a0f357d910354fb892ffb642cd0cf0a"
+  integrity sha512-FV+UszFvarv0BWsGOASMfQGLDzfvgZIA2P9UFwo+4QX8C10c8TXegeIhz+h63UC5aTcEpgWJ4e7MhQZseNzK1w==
   dependencies:
     "@types/amqplib" "*"
 
