@@ -45,7 +45,7 @@
     "@nestjs/testing": "7.0.7",
     "@types/amqp-connection-manager": "2.0.9",
     "@types/amqplib": "0.5.13",
-    "@types/jest": "25.1.4",
+    "@types/jest": "25.1.5",
     "@types/node": "13.9.8",
     "jest": "25.2.6",
     "proxyquire": "2.1.3",
