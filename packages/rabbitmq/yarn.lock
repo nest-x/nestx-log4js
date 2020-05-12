@@ -573,10 +573,10 @@
     "@angular-devkit/schematics" "9.0.6"
     fs-extra "8.1.0"
 
-"@nestjs/testing@7.0.10":
-  version "7.0.10"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.0.10.tgz#190079e1fdf383ce48e7f401e552fc99c4399687"
-  integrity sha512-WBm2v1a/wYO/SkURttjUWWXFPGTUPki0WCG8SgjDX6SWXF7x4FjGAIFukNBbz9ugvZNn2rW9k5pncvS0CuM6Xw==
+"@nestjs/testing@7.0.11":
+  version "7.0.11"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.0.11.tgz#4f8d75d38d157d7c01872481dce0f950519415ec"
+  integrity sha512-BnGH/apFTN+yHBsT5uSlVWyeYgB5vwLa307ZbnaQL2KkebAEHPXXJp1JlQ3KWzqzXeCjVPTKwAMgpQTuN1k2tg==
   dependencies:
     optional "0.1.4"
     tslib "1.11.2"

@@ -42,7 +42,7 @@
   "devDependencies": {
     "@nestjs/cli": "7.1.5",
     "@nestjs/schematics": "7.0.0",
-    "@nestjs/testing": "7.0.10",
+    "@nestjs/testing": "7.0.11",
     "@types/amqp-connection-manager": "2.0.9",
     "@types/amqplib": "0.5.13",
     "@types/jest": "25.2.1",
