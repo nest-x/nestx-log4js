@@ -1325,7 +1325,16 @@
     multer "1.4.2"
     tslib "2.0.0"
 
-"@nestjs/schematics@7.0.0", "@nestjs/schematics@^7.0.0":
+"@nestjs/schematics@7.0.1":
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/@nestjs/schematics/-/schematics-7.0.1.tgz#bb729d06223d8b4df1a65e94d8fac17ef1b45657"
+  integrity sha512-MOnJPqKPpuwBHDdw96gHoshd/QEYrUlLPF92xQFXm6uIOo1EGISg8OOSoji2isEtp2gHpO+bL8p/h4oPG10Fqw==
+  dependencies:
+    "@angular-devkit/core" "9.1.7"
+    "@angular-devkit/schematics" "9.1.7"
+    fs-extra "9.0.0"
+
+"@nestjs/schematics@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@nestjs/schematics/-/schematics-7.0.0.tgz#7b48bdcd50dad430957b2c112d555a5147c2e60e"
   integrity sha512-R7Yw7wbRk5FNLyeJhvnAys+6ZXymIQWD6vKHOMRbSlR5LV8Q2F0st0EVw/sMmBOtp0EYAwGiXjwNV4ye/znmHA==
@@ -4974,7 +4983,7 @@ fs-extra@8.1.0, fs-extra@^8.0.0, fs-extra@^8.1.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^9.0.0:
+fs-extra@9.0.0, fs-extra@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.0.tgz#b6afc31036e247b2466dc99c29ae797d5d4580a3"
   integrity sha512-pmEYSk3vYsG/bF651KPUXZ+hvjpgWYw/Gc7W9NFUe3ZVLczKKWIij3IKpOrQcdw4TILtibFslZ0UmR8Vvzig4g==
