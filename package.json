@@ -46,28 +46,6 @@
     "tsconfig-paths": "3.9.0",
     "typescript": "4.0.3"
   },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "plugin:@typescript-eslint/recommended",
-      "prettier/@typescript-eslint"
-    ],
-    "plugins": [
-      "@typescript-eslint",
-      "prettier"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "rules": {
-      "@typescript-eslint/camelcase": "off",
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-member-accessibility": "off",
-      "@typescript-eslint/no-parameter-properties": "off",
-      "@typescript-eslint/interface-name-prefix": "off"
-    }
-  },
   "jest": {
     "moduleFileExtensions": [
       "ts",

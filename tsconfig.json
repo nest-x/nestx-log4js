@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "target": "es6",
     "declaration": true,
     "removeComments": true,
     "noLib": false,
@@ -8,12 +9,15 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "noImplicitAny": false,
-    "target": "es6",
     "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./src",
     "skipLibCheck": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/__tests__", "**/*.spec.ts", "**/*.test.ts"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }

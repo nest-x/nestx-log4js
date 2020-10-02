@@ -4,7 +4,7 @@
 [![Codecov](https://codecov.io/gh/nest-x/nestx-log4js/branch/master/graph/badge.svg)](https://codecov.io/gh/nest-x/nestx-log4js)
 
 
-Provide fix log4js module as NestJS module
+Provide log4js module as NestJS module
 
 
 
