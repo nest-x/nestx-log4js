@@ -1,19 +1,15 @@
 {
-  "name": "@nestx-log4js/rabbitmq",
+  "name": "@nestx-log4js/core",
   "version": "0.0.1",
-  "description": "nestx-log4js rabbitmq appender",
+  "description": "nestx-log4js core module",
+  "author": "aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/nest-x/nestx-log4js#readme",
   "keywords": [
-    "rabbitmq",
+    "nestjs",
     "nestx",
     "log4js",
     "logger"
   ],
-  "author": "aaroncui <aaroncui@tencent.com>",
-  "homepage": "https://github.com/nest-x/nestx-log4js#readme",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nest-x/nestx-log4js.git"
@@ -21,6 +17,14 @@
   "bugs": {
     "url": "https://github.com/nest-x/nestx-log4js/issues"
   },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "index.ts"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
@@ -31,9 +35,6 @@
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
-    "nestx-amqp": "^1.0.6",
-    "amqp-connection-manager": "^3.2.0",
-    "amqplib": "^0.6.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.4",
@@ -43,8 +44,6 @@
     "@nestjs/cli": "7.5.1",
     "@nestjs/schematics": "7.1.2",
     "@nestjs/testing": "7.4.4",
-    "@types/amqp-connection-manager": "2.0.10",
-    "@types/amqplib": "0.5.13",
     "@types/jest": "26.0.14",
     "@types/node": "13.13.5",
     "jest": "26.4.2",
