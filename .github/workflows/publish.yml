@@ -18,6 +18,7 @@ jobs:
       - name: Install Dependencies and Build
         run: |
           yarn
+          yarn bootstrap
           yarn build
       - name: Semantic Release
         run: |
