@@ -1,6 +1,6 @@
 {
   "name": "@nestx-log4js/core",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "nestx-log4js core module",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/nest-x/nestx-log4js#readme",
@@ -35,10 +35,10 @@
   "dependencies": {
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
+    "log4js": "^6.1.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.4",
-    "log4js": "^6.1.2"
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "@nestjs/cli": "7.5.1",
