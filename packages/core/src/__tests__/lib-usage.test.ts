@@ -9,6 +9,16 @@ import { Configuration, LoggingEvent } from 'log4js';
 
 describe('log4js usage', () => {
 
+
+  afterEach(async (done) => {
+    // waiting for log4js worker process shutdown
+    // we should support graceful shutdown in nestjs/cloud-native project
+    log4js.shutdown(() => {
+      done();
+    });
+  });
+
+
   it('# sample usage', () => {
     const logger = log4js.getLogger();
 
