@@ -2,18 +2,14 @@
   "name": "@nestx-log4js/core",
   "version": "0.0.1",
   "description": "nestx-log4js core module",
+  "author": "aquariuslt <superaquariuslt@gmail.com>",
+  "homepage": "https://github.com/nest-x/nestx-log4js#readme",
   "keywords": [
     "nestjs",
     "nestx",
     "log4js",
     "logger"
   ],
-  "author": "aquariuslt <superaquariuslt@gmail.com>",
-  "homepage": "https://github.com/nest-x/nestx-log4js#readme",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nest-x/nestx-log4js.git"
@@ -21,6 +17,14 @@
   "bugs": {
     "url": "https://github.com/nest-x/nestx-log4js/issues"
   },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "index.ts"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
