@@ -8,7 +8,7 @@
     "log4js",
     "logger"
   ],
-  "author": "aaroncui <aaroncui@tencent.com>",
+  "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/nest-x/nestx-log4js#readme",
   "license": "MIT",
   "publishConfig": {
