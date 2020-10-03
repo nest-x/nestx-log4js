@@ -43,7 +43,7 @@ import { Log4jsModule } from '@nestx-log4js/core';
 
 @Module({
   imports: [
-    Log4js.forRoot()
+    Log4jsModule.forRoot()
   ]
 })
 export class AppModule {}
