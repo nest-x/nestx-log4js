@@ -19,7 +19,13 @@ export const DEFAULT_LOG4JS_OPTIONS: Log4jsOptions = {
   config: {
     appenders: {
       stdout: {
-        type: 'stdout'
+        type: 'stdout',
+        layout: {
+          type: 'pattern',
+          // log4js default pattern %d{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %-5level %logger{36} - %msg%n
+          // we use process id instead thread id
+          pattern: '%[[%d{yyyy-MM-dd hh:mm:ss:SSS}][%z][%p][%X{name}]%] - %m%n'
+        }
       }
     },
     categories: {
