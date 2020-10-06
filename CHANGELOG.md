@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/nest-x/nestx-log4js/compare/v1.0.0...v1.1.0) (2020-10-06)
+
+
+### Features
+
+* **core:** update default pattern ([#255](https://github.com/nest-x/nestx-log4js/issues/255)) ([80cf7a0](https://github.com/nest-x/nestx-log4js/commit/80cf7a0cf5976ed58358fddb86e9fd8f6605653d))
+
 # 1.0.0 (2020-10-03)
 
 
