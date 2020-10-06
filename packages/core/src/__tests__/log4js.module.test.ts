@@ -211,4 +211,26 @@ describe('@nestx-log4js module', () => {
     done();
   });
 
+
+  it('# should use nestjs context display as category field',async(done)=>{
+    const module: TestingModule = await Test.createTestingModule({
+      imports: [
+        Log4jsModule.forRoot()
+      ]
+    }).compile();
+
+    const app = module.createNestApplication();
+    await app.init();
+
+    const log4jsLogger = app.get(Log4jsLogger);
+    expect(log4jsLogger).toBeInstanceOf(Log4jsLogger);
+
+    app.useLogger(log4jsLogger);
+
+    const logger = new Logger('NestJS');
+    logger.log('log using nestjs as category')
+
+    await app.close();
+    done();
+  });
 });
