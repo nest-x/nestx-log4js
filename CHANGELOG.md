@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/nest-x/nestx-log4js/compare/v1.1.0...v1.1.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* **core:** remove new line in default pattern ([620ec02](https://github.com/nest-x/nestx-log4js/commit/620ec0282187d04ef6e6b1c3f66d4ac59591a1ad))
+
 # [1.1.0](https://github.com/nest-x/nestx-log4js/compare/v1.0.0...v1.1.0) (2020-10-06)
 
 
