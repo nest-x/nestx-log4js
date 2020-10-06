@@ -9,7 +9,7 @@ export class Log4jsLogger implements LoggerService {
   }
 
   updateContext(context?: string) {
-    if (context) {
+    if (context && context.length > 0) {
       this.logger.addContext('name', context);
     } else {
       this.logger.removeContext('name');
@@ -18,11 +18,13 @@ export class Log4jsLogger implements LoggerService {
 
 
   verbose(message: any, context?: string) {
+    this.updateContext(context);
     this.logger.trace(message);
   }
 
 
   debug(message: any, context?: string) {
+    this.updateContext(context);
     this.logger.debug(message);
   }
 
@@ -33,10 +35,12 @@ export class Log4jsLogger implements LoggerService {
   }
 
   warn(message: any, context?: string) {
+    this.updateContext(context);
     this.logger.warn(message);
   }
 
   error(message: any, trace?: string, context?: string) {
+    this.updateContext(context);
     this.logger.error(message);
   }
 
