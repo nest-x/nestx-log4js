@@ -72,7 +72,7 @@ describe('log4js usage', () => {
 
   describe('log4js layout', () => {
 
-    it('# should print with patern layout', () => {
+    it('# should print with pattern layout', () => {
       const config: Configuration = {
         appenders: {
           out: {
