@@ -1,6 +1,6 @@
-import { Inject, Injectable, LoggerService, Optional } from '@nestjs/common';
+import { Injectable, LoggerService } from '@nestjs/common';
 import { Logger } from 'log4js';
-import { LOG4JS_LOGGER } from './log4js.constants';
+
 
 @Injectable()
 export class Log4jsLogger implements LoggerService {
@@ -12,7 +12,7 @@ export class Log4jsLogger implements LoggerService {
     if (context && context.length > 0) {
       this.logger.addContext('name', context);
     } else {
-      this.logger.removeContext('name');
+      this.logger.addContext('name', '');
     }
   }
 
