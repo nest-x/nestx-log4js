@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/nest-x/nestx-log4js/compare/v1.1.2...v1.1.3) (2020-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update nest monorepo to v7.5.1 ([91ffd0a](https://github.com/nest-x/nestx-log4js/commit/91ffd0a4104308c3d22cb822501b3c0b636b7769))
+
 ## [1.1.2](https://github.com/nest-x/nestx-log4js/compare/v1.1.1...v1.1.2) (2020-11-02)
 
 
