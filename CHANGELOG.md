@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/nest-x/nestx-log4js/compare/v1.2.0...v1.2.1) (2020-11-14)
+
+
+### Bug Fixes
+
+* add padding for default layout `LEVEL` field ([a6e57cc](https://github.com/nest-x/nestx-log4js/commit/a6e57cc8a9ebbf2748a91c0f0686bef94e69979c))
+
 # [1.2.0](https://github.com/nest-x/nestx-log4js/compare/v1.1.4...v1.2.0) (2020-11-14)
 
 
