@@ -258,7 +258,7 @@ describe('@nestx-log4js module', () => {
     logger.log('log using nestjs as category');
 
     const unnamedLogger = log4js.getLogger();
-    unnamedLogger.warn('log using none as category');
+    unnamedLogger.debug('log using none as category');
 
     await app.close();
     done();
