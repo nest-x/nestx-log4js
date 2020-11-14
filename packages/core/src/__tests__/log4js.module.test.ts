@@ -1,3 +1,4 @@
+import * as log4js from 'log4js';
 import { Test, TestingModule } from '@nestjs/testing';
 import { Log4jsModule } from '../log4js.module';
 import { Log4jsLogger } from '../log4js.classes';
@@ -234,6 +235,34 @@ describe('@nestx-log4js module', () => {
     unnamedLogger.log('log using none as category');
 
     await app.close();
+    done();
+  });
+
+  it('# should support undefined context', async (done) => {
+
+    const module: TestingModule = await Test.createTestingModule({
+      imports: [
+        Log4jsModule.forRoot()
+      ]
+    }).compile();
+
+    const app = module.createNestApplication();
+    await app.init();
+
+    const log4jsLogger = app.get(Log4jsLogger);
+    expect(log4jsLogger).toBeInstanceOf(Log4jsLogger);
+
+    app.useLogger(log4jsLogger);
+
+    const logger = new Logger('NestJS');
+    logger.log('log using nestjs as category');
+
+    const unnamedLogger = log4js.getLogger();
+    unnamedLogger.warn('log using none as category');
+
+    await app.close();
+    done();
+
     done();
   });
 });

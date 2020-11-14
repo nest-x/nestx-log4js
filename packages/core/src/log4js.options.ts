@@ -1,6 +1,6 @@
-import { Configuration } from 'log4js';
+import { Configuration, LoggingEvent } from 'log4js';
 import { FactoryProvider, ModuleMetadata, Type } from '@nestjs/common';
-import { LOG4JS_LOGGER, LOG4JS_OPTIONS } from './log4js.constants';
+import { LOG4JS_DEFAULT_CONFIG, LOG4JS_LOGGER, LOG4JS_OPTIONS } from './log4js.constants';
 
 
 export interface Log4jsOptionsFactory {
@@ -20,30 +20,11 @@ export interface Log4jsOptions {
  * @see https://github.com/spring-projects/spring-boot/blob/2.3.x/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/logback/DefaultLogbackConfiguration.java
  **/
 export const DEFAULT_LOG4JS_OPTIONS: Log4jsOptions = {
-  config: {
-    appenders: {
-      stdout: {
-        type: 'stdout',
-        layout: {
-          type: 'pattern',
-          // log4js default pattern %d{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %-5level %logger{36} - %msg%n
-          // we use process id instead thread id
-          pattern: '%[[%d{yyyy-MM-dd hh:mm:ss:SSS}][%z][%p][%-15.15X{name}]%] - %m'
-        }
-      }
-    },
-    categories: {
-      default: {
-        appenders: ['stdout'],
-        level: 'debug'
-      }
-    }
-  }
-
+  config: LOG4JS_DEFAULT_CONFIG
 };
 
 
-export interface Log4jsAsyncOptions extends Pick<ModuleMetadata, 'imports'> {
+export interface Log4jsAsyncOptions extends Pick <ModuleMetadata, 'imports'> {
   name?: string;
   inject?: FactoryProvider['inject'];
   useExisting?: Type<Log4jsOptionsFactory>;
