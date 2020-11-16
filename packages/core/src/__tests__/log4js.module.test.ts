@@ -5,6 +5,7 @@ import { Log4jsLogger } from '../log4js.classes';
 import { Logger } from '@nestjs/common';
 import { LOG4JS_OPTIONS } from '../log4js.constants';
 import { getLog4jsLoggerToken, getLog4jsOptionsToken } from '../log4js.options';
+import { parseNestModuleCallStack } from '../log4js.extentions';
 
 describe('@nestx-log4js module', () => {
 
@@ -262,6 +263,34 @@ describe('@nestx-log4js module', () => {
 
     await app.close();
     done();
+
+  });
+
+
+  it('# should support file depth in callstack parsing', async (done) => {
+
+    const data = {
+      stack: 'Error: \n' +
+        '    at Logger._log (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:88:48)\n' +
+        '    at Logger.log (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:73:12)\n' +
+        '    at Logger.<computed> [as info] (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:124:10)\n' +
+        '    at Log4jsLogger.log (/ci/workspace/nestx-log4js/packages/core/src/log4js.classes.ts:34:17)\n' +
+        '    at Logger.callFunction (/ci/workspace/nestx-log4js/packages/core/node_modules/@nestjs/common/services/logger.service.js:69:18)\n' +
+        '    at Logger.log (/ci/workspace/nestx-log4js/packages/core/node_modules/@nestjs/common/services/logger.service.js:25:14)\n' +
+        '    at /ci/workspace/nestx-log4js/packages/core/src/__tests__/log4js.module.test.ts:258:12\n' +
+        '    at Generator.next (<anonymous>)\n' +
+        '    at fulfilled (/ci/workspace/nestx-log4js/packages/core/src/__tests__/log4js.module.test.ts:5:58)'
+    };
+
+
+    const { fileName } = parseNestModuleCallStack(data);
+
+    expect(fileName).toEqual('/ci/workspace/nestx-log4js/packages/core/src/__tests__/log4js.module.test.ts');
+
+
+    const customStackLineResult = parseNestModuleCallStack(data, 4);
+
+    expect(customStackLineResult.fileName).toEqual('/ci/workspace/nestx-log4js/packages/core/src/log4js.classes.ts');
 
     done();
   });
