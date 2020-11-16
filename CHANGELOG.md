@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/nest-x/nestx-log4js/compare/v1.2.1...v1.3.0) (2020-11-16)
+
+
+### Features
+
+* **core:** support file depth upgrade ([#300](https://github.com/nest-x/nestx-log4js/issues/300)) ([7cfd258](https://github.com/nest-x/nestx-log4js/commit/7cfd258670da28ef7ae9d316f97a5e6bfdfccc49))
+
 ## [1.2.1](https://github.com/nest-x/nestx-log4js/compare/v1.2.0...v1.2.1) (2020-11-14)
 
 
