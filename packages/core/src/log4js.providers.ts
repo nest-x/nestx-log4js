@@ -3,6 +3,7 @@ import { FactoryProvider } from '@nestjs/common';
 import { getLog4jsLoggerToken, getLog4jsOptionsToken, Log4jsAsyncOptions, Log4jsOptions, Log4jsOptionsFactory } from './log4js.options';
 import { Type } from '@nestjs/common/interfaces/type.interface';
 import { Log4jsLogger } from './log4js.classes';
+import { parseNestModuleCallStack } from './log4js.extentions';
 
 
 export type Log4jsLoggerFactoryProvider = FactoryProvider<Log4jsLogger | Promise<Log4jsLogger>>;
@@ -15,6 +16,8 @@ export const createLog4jsLogger = (name: string): Log4jsLoggerFactoryProvider =>
   useFactory: async (options: Log4jsOptions): Promise<Log4jsLogger> => {
     const config = options.config;
     const logger = log4js.configure(config).getLogger();
+
+    logger.setParseCallStackFunction(parseNestModuleCallStack);
 
     // TODO: add log4js instance container so we can get different logger instance
     return new Log4jsLogger(logger);
