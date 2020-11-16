@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@nestjs/cli": "7.5.2",
-    "@nestjs/schematics": "7.2.1",
+    "@nestjs/schematics": "7.2.2",
     "@nestjs/testing": "7.5.2",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/exec": "5.0.0",
