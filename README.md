@@ -174,3 +174,20 @@ You can refer to [SpringBoot logging features](https://docs.spring.io/spring-boo
 2020-11-14 15:47:24:490 WARN --- [              -]      src/__tests__/log4js.module.test.ts  : log using none as category
 
 ```
+
+
+
+
+> Tips: You are using grok pattern via filebeat/other sidecar log agent? You can use below grok pattern:
+> %{TIMESTAMP_ISO8601:server_time}\s*%{LOGLEVEL:level}\s*---\s*\[\s*%{NOTSPACE:context}\]\s*%{NOTSPACE:file_path}\s*:\s*%{GREEDYDATA:content}
+>
+> It will split to friendly format (you can update alias yourself via grok document)
+> - server_time
+> - level
+> - context
+> - file_path
+> - content
+
+
+
+
