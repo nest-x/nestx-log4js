@@ -1,3 +1,10 @@
+## [1.3.6](https://github.com/nest-x/nestx-log4js/compare/v1.3.5...v1.3.6) (2020-12-17)
+
+
+### Bug Fixes
+
+* **deps:** bump nestjs/common dependencies ([76dab38](https://github.com/nest-x/nestx-log4js/commit/76dab3890f3298587632b2c747b9f4a495cec8e8))
+
 ## [1.3.5](https://github.com/nest-x/nestx-log4js/compare/v1.3.4...v1.3.5) (2020-12-10)
 
 
