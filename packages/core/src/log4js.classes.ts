@@ -50,7 +50,7 @@ export class Log4jsLogger implements LoggerService {
     return new Date(Date.now()).toLocaleString(undefined, localeStringOptions);
   }
 
-  getTimeStamp () {
+  getTimestamp () {
     return Log4jsLogger.getTimestamp();
   }
 }

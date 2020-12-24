@@ -272,7 +272,7 @@ describe('@nestx-log4js module', () => {
 
     app.useLogger(log4jsLogger);
 
-    expect(log4jsLogger).toHaveProperty('getTimeStamp');
+    expect(log4jsLogger).toHaveProperty('getTimestamp');
     expect(Log4jsLogger.getTimestamp).not.toBeUndefined();
 
     done();
