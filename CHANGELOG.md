@@ -1,3 +1,10 @@
+## [1.3.12](https://github.com/nest-x/nestx-log4js/compare/v1.3.11...v1.3.12) (2020-12-24)
+
+
+### Bug Fixes
+
+* **logger:** correct method case ([a59398d](https://github.com/nest-x/nestx-log4js/commit/a59398d2526ad386e836fb6d4c961d84e8f62edc))
+
 ## [1.3.11](https://github.com/nest-x/nestx-log4js/compare/v1.3.10...v1.3.11) (2020-12-24)
 
 
