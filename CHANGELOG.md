@@ -1,3 +1,10 @@
+## [1.3.10](https://github.com/nest-x/nestx-log4js/compare/v1.3.9...v1.3.10) (2020-12-24)
+
+
+### Bug Fixes
+
+* **deps:** move deps to dev/peerDependencies ([49912f5](https://github.com/nest-x/nestx-log4js/commit/49912f5ce83ad45b0f6ab8a94657770e635c873e)), closes [#342](https://github.com/nest-x/nestx-log4js/issues/342)
+
 ## [1.3.9](https://github.com/nest-x/nestx-log4js/compare/v1.3.8...v1.3.9) (2020-12-21)
 
 
