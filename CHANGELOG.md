@@ -1,3 +1,10 @@
+## [1.3.11](https://github.com/nest-x/nestx-log4js/compare/v1.3.10...v1.3.11) (2020-12-24)
+
+
+### Bug Fixes
+
+* **logger:** add static and instance method `getTimestamp` ([10b78d1](https://github.com/nest-x/nestx-log4js/commit/10b78d13bd07499635093d457e5cc772e296f0e4))
+
 ## [1.3.10](https://github.com/nest-x/nestx-log4js/compare/v1.3.9...v1.3.10) (2020-12-24)
 
 
