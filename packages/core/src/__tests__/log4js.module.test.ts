@@ -8,12 +8,9 @@ import { getLog4jsLoggerToken, getLog4jsOptionsToken } from '../log4js.options';
 import { parseNestModuleCallStack } from '../log4js.extentions';
 
 describe('@nestx-log4js module', () => {
-
   it('# should module define with sync-and-empty options correctly', async (done) => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        Log4jsModule.forRoot()
-      ]
+      imports: [Log4jsModule.forRoot()]
     }).compile();
 
     const app = module.createNestApplication();
@@ -35,7 +32,6 @@ describe('@nestx-log4js module', () => {
 
     await app.close();
     done();
-
   });
 
   it('# should module define with sync options correctly', async (done) => {
@@ -54,17 +50,11 @@ describe('@nestx-log4js module', () => {
             },
             categories: {
               default: {
-                appenders: [
-                  'out',
-                  'console'
-                ],
+                appenders: ['out', 'console'],
                 level: 'info'
               },
               debug: {
-                appenders: [
-                  'out',
-                  'console'
-                ],
+                appenders: ['out', 'console'],
                 level: 'debug'
               }
             }
@@ -93,7 +83,6 @@ describe('@nestx-log4js module', () => {
   });
 
   it('# should module defined with async options', async (done) => {
-
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRootAsync({
@@ -111,17 +100,11 @@ describe('@nestx-log4js module', () => {
               },
               categories: {
                 default: {
-                  appenders: [
-                    'out',
-                    'console'
-                  ],
+                  appenders: ['out', 'console'],
                   level: 'info'
                 },
                 debug: {
-                  appenders: [
-                    'out',
-                    'console'
-                  ],
+                  appenders: ['out', 'console'],
                   level: 'debug'
                 }
               }
@@ -157,7 +140,6 @@ describe('@nestx-log4js module', () => {
   });
 
   it('# should module defined with spec name', async (done) => {
-
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRoot({
@@ -174,17 +156,11 @@ describe('@nestx-log4js module', () => {
             },
             categories: {
               default: {
-                appenders: [
-                  'out',
-                  'console'
-                ],
+                appenders: ['out', 'console'],
                 level: 'info'
               },
               debug: {
-                appenders: [
-                  'out',
-                  'console'
-                ],
+                appenders: ['out', 'console'],
                 level: 'debug'
               }
             }
@@ -192,7 +168,6 @@ describe('@nestx-log4js module', () => {
         })
       ]
     }).compile();
-
 
     const app = module.createNestApplication();
     await app.init();
@@ -209,16 +184,12 @@ describe('@nestx-log4js module', () => {
 
     await app.close();
 
-
     done();
   });
 
-
   it('# should use nestjs context display as category field', async (done) => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        Log4jsModule.forRoot()
-      ]
+      imports: [Log4jsModule.forRoot()]
     }).compile();
 
     const app = module.createNestApplication();
@@ -240,11 +211,8 @@ describe('@nestx-log4js module', () => {
   });
 
   it('# should support undefined context', async (done) => {
-
     const module: TestingModule = await Test.createTestingModule({
-      imports: [
-        Log4jsModule.forRoot()
-      ]
+      imports: [Log4jsModule.forRoot()]
     }).compile();
 
     const app = module.createNestApplication();
@@ -263,14 +231,12 @@ describe('@nestx-log4js module', () => {
 
     await app.close();
     done();
-
   });
 
-
   it('# should support file depth in callstack parsing', async (done) => {
-
     const data = {
-      stack: 'Error: \n' +
+      stack:
+        'Error: \n' +
         '    at Logger._log (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:88:48)\n' +
         '    at Logger.log (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:73:12)\n' +
         '    at Logger.<computed> [as info] (/ci/workspace/nestx-log4js/packages/core/node_modules/log4js/lib/logger.js:124:10)\n' +
@@ -282,15 +248,32 @@ describe('@nestx-log4js module', () => {
         '    at fulfilled (/ci/workspace/nestx-log4js/packages/core/src/__tests__/log4js.module.test.ts:5:58)'
     };
 
-
     const { fileName } = parseNestModuleCallStack(data);
 
     expect(fileName).toEqual('/ci/workspace/nestx-log4js/packages/core/src/__tests__/log4js.module.test.ts');
 
-
     const customStackLineResult = parseNestModuleCallStack(data, 4);
 
     expect(customStackLineResult.fileName).toEqual('/ci/workspace/nestx-log4js/packages/core/src/log4js.classes.ts');
+
+    done();
+  });
+
+  it('# should have `getTimestamp` function property', async (done) => {
+    const module: TestingModule = await Test.createTestingModule({
+      imports: [Log4jsModule.forRoot()]
+    }).compile();
+
+    const app = module.createNestApplication();
+    await app.init();
+
+    const log4jsLogger = app.get(Log4jsLogger);
+    expect(log4jsLogger).toBeInstanceOf(Log4jsLogger);
+
+    app.useLogger(log4jsLogger);
+
+    expect(log4jsLogger).toHaveProperty('getTimeStamp');
+    expect(Log4jsLogger.getTimestamp).not.toBeUndefined();
 
     done();
   });

@@ -1,12 +1,9 @@
 import { Injectable, LoggerService } from '@nestjs/common';
 import { Logger } from 'log4js';
 
-
 @Injectable()
 export class Log4jsLogger implements LoggerService {
-
-  constructor(private readonly logger: Logger) {
-  }
+  constructor(private readonly logger: Logger) {}
 
   updateContext(context?: string) {
     if (context && context.length > 0) {
@@ -16,18 +13,15 @@ export class Log4jsLogger implements LoggerService {
     }
   }
 
-
   verbose(message: any, context?: string) {
     this.updateContext(context);
     this.logger.trace(message);
   }
 
-
   debug(message: any, context?: string) {
     this.updateContext(context);
     this.logger.debug(message);
   }
-
 
   log(message: any, context?: string) {
     this.updateContext(context);
@@ -44,5 +38,19 @@ export class Log4jsLogger implements LoggerService {
     this.logger.error(message);
   }
 
+  static getTimestamp() {
+    const localeStringOptions = {
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      day: '2-digit',
+      month: '2-digit'
+    };
+    return new Date(Date.now()).toLocaleString(undefined, localeStringOptions);
+  }
 
+  getTimeStamp () {
+    return Log4jsLogger.getTimestamp();
+  }
 }
