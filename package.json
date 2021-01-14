@@ -85,7 +85,8 @@
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "lerna exec --concurrency 1 -- npm version ${nextRelease.version} && lerna exec --concurrency 1 -- npm publish --access public --registry=https://registry.npmjs.org && lerna version ${nextRelease.version} --no-git-tag-version --no-push --amend --yes"
+          "prepareCmd": "lerna exec --concurrency 1 -- npm version ${nextRelease.version} && lerna version ${nextRelease.version} --no-git-tag-version --no-push --amend --yes",
+          "publishCmd": "lerna exec --concurrency 1 -- npm publish --access public --registry=https://registry.npmjs.org"
         }
       ],
       [
