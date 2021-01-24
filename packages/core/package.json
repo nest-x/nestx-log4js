@@ -59,26 +59,5 @@
     "@nestjs/core": "^7.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "collectCoverageFrom": [
-      "<rootDir>/src/*.ts",
-      "!<rootDir>/src/__tests__/**/*.ts",
-      "!<rootDir>/src/shared/**/*.ts",
-      "!<rootDir>/src/index.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/*.test.ts"
-    ],
-    "testEnvironment": "node",
-    "coverageDirectory": "<rootDir>/reports/coverage"
   }
 }
