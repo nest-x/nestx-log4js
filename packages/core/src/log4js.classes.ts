@@ -3,7 +3,8 @@ import { Logger } from 'log4js';
 
 @Injectable()
 export class Log4jsLogger implements LoggerService {
-  constructor(private readonly logger: Logger) {}
+  constructor(private readonly logger: Logger) {
+  }
 
   updateContext(context?: string) {
     if (context && context.length > 0) {
@@ -46,11 +47,11 @@ export class Log4jsLogger implements LoggerService {
       second: 'numeric',
       day: '2-digit',
       month: '2-digit'
-    };
+    } as const;
     return new Date(Date.now()).toLocaleString(undefined, localeStringOptions);
   }
 
-  getTimestamp () {
+  getTimestamp() {
     return Log4jsLogger.getTimestamp();
   }
 }
