@@ -58,12 +58,11 @@ export class Log4jsLogger implements LoggerService {
 
   // nestjs logging use `process['stdout' | ...].write(message) to print log
   // But log4js use async logging clustering to print log `clustering.send(loggingEvent);`
-  // to keep the output order, there needs to use `logger.trace`
+  // to maintain the same behavior as nestjs logging, there should use error level
   printStackTrace(stackTrace?: string) {
     if(!stackTrace) {
       return;
     }
-    // to maintain the same behavior as nestjs logging, there should use error level
     this.logger.error(stackTrace);
   }
 }
