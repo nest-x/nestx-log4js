@@ -136,8 +136,6 @@ describe('@nestx-log4js module', () => {
     await app.close();
 
     done();
-
-    done();
   });
 
   it('# should module defined with spec name', async (done) => {
