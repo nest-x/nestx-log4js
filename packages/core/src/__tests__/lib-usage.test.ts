@@ -6,10 +6,7 @@
 import * as log4js from 'log4js';
 import { Configuration, LoggingEvent } from 'log4js';
 
-
 describe('log4js usage', () => {
-
-
   afterEach(async (done) => {
     // waiting for log4js worker process shutdown
     // we should support graceful shutdown in nestjs/cloud-native project
@@ -18,7 +15,6 @@ describe('log4js usage', () => {
     });
   });
 
-
   it('# sample usage', () => {
     const logger = log4js.getLogger();
 
@@ -26,11 +22,8 @@ describe('log4js usage', () => {
     logger.debug('print from default logger');
   });
 
-
   describe('log4js configuration', () => {
-
     it('# should load configuration via config object', () => {
-
       const config: Configuration = {
         appenders: {
           out: {
@@ -43,17 +36,11 @@ describe('log4js usage', () => {
         },
         categories: {
           default: {
-            appenders: [
-              'out',
-              'console'
-            ],
+            appenders: ['out', 'console'],
             level: 'info'
           },
           debug: {
-            appenders: [
-              'out',
-              'console'
-            ],
+            appenders: ['out', 'console'],
             level: 'debug'
           }
         }
@@ -67,11 +54,9 @@ describe('log4js usage', () => {
       const debugLogger = log4js.getLogger('debug');
       debugLogger.debug('print from debug logger (via configuration)');
     });
-
   });
 
   describe('log4js layout', () => {
-
     it('# should print with pattern layout', () => {
       const config: Configuration = {
         appenders: {
@@ -90,9 +75,7 @@ describe('log4js usage', () => {
         },
         categories: {
           default: {
-            appenders: [
-              'out'
-            ],
+            appenders: ['out'],
             level: 'debug'
           }
         }
@@ -105,7 +88,6 @@ describe('log4js usage', () => {
     });
 
     it('# should print with custom layout', () => {
-
       const config: Configuration = {
         appenders: {
           out: {
@@ -117,19 +99,15 @@ describe('log4js usage', () => {
         },
         categories: {
           default: {
-            appenders: [
-              'out'
-            ],
+            appenders: ['out'],
             level: 'debug'
           }
         }
       };
 
-      log4js.addLayout('json', () =>
-        (logEvent: LoggingEvent) => {
-          return JSON.stringify(logEvent);
-        }
-      );
+      log4js.addLayout('json', () => (logEvent: LoggingEvent) => {
+        return JSON.stringify(logEvent);
+      });
       log4js.configure(config);
       const logger = log4js.getLogger();
 
@@ -148,26 +126,22 @@ describe('log4js usage', () => {
         },
         categories: {
           default: {
-            appenders: [
-              'out'
-            ],
+            appenders: ['out'],
             level: 'debug'
           }
         }
       };
 
-      log4js.addLayout('json-with-context', () =>
-        (logEvent: LoggingEvent) => {
-          const optimizeLogEvent = {
-            ip: logEvent.context.ip,
-            '@timestamp': logEvent.startTime.getTime(),
-            category: logEvent.categoryName,
-            level: logEvent.level.levelStr,
-            data: logEvent.data
-          };
-          return JSON.stringify(optimizeLogEvent);
-        }
-      );
+      log4js.addLayout('json-with-context', () => (logEvent: LoggingEvent) => {
+        const optimizeLogEvent = {
+          ip: logEvent.context.ip,
+          '@timestamp': logEvent.startTime.getTime(),
+          category: logEvent.categoryName,
+          level: logEvent.level.levelStr,
+          data: logEvent.data
+        };
+        return JSON.stringify(optimizeLogEvent);
+      });
       log4js.configure(config);
       const logger = log4js.getLogger();
 
@@ -175,13 +149,10 @@ describe('log4js usage', () => {
       logger.addContext('ip', '127.0.0.1');
 
       logger.info('print from debug logger (via layout:json-with-context)');
-
     });
   });
 
-
   describe('log4js file rotation', () => {
-
     it('# should enable file rotation via config', () => {
       const config: Configuration = {
         appenders: {
@@ -192,7 +163,7 @@ describe('log4js usage', () => {
             type: 'file',
             filename: './logs/log-with-json-context.log',
             maxLogSize: 200, // maxLogSize use bytes ad unit
-            backups: 10,     // default use 5 so 1KB file size total rotating
+            backups: 10, // default use 5 so 1KB file size total rotating
             layout: {
               type: 'json-context'
             }
@@ -200,27 +171,22 @@ describe('log4js usage', () => {
         },
         categories: {
           default: {
-            appenders: [
-              'out',
-              'file'
-            ],
+            appenders: ['out', 'file'],
             level: 'debug'
           }
         }
       };
 
-      log4js.addLayout('json-context', () =>
-        (logEvent: LoggingEvent) => {
-          const optimizeLogEvent = {
-            ip: logEvent.context.ip,
-            '@timestamp': logEvent.startTime.getTime(),
-            category: logEvent.categoryName,
-            level: logEvent.level.levelStr,
-            data: logEvent.data
-          };
-          return JSON.stringify(optimizeLogEvent);
-        }
-      );
+      log4js.addLayout('json-context', () => (logEvent: LoggingEvent) => {
+        const optimizeLogEvent = {
+          ip: logEvent.context.ip,
+          '@timestamp': logEvent.startTime.getTime(),
+          category: logEvent.categoryName,
+          level: logEvent.level.levelStr,
+          data: logEvent.data
+        };
+        return JSON.stringify(optimizeLogEvent);
+      });
       log4js.configure(config);
       const logger = log4js.getLogger();
 
@@ -228,8 +194,6 @@ describe('log4js usage', () => {
       logger.addContext('ip', '127.0.0.1');
 
       logger.info('print from debug logger (via layout:json-context)');
-
     });
   });
-
 });

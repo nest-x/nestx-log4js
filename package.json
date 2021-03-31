@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "format": "prettier --write \"packages/*/src/**/*.ts\"",
+    "lint": "eslint \"packages/*/src/**/*.ts\" --fix",
     "test": "jest",
     "test:cov": "jest --coverage",
     "build": "lerna run build",

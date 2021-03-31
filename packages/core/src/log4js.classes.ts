@@ -3,8 +3,7 @@ import { Logger } from 'log4js';
 
 @Injectable()
 export class Log4jsLogger implements LoggerService {
-  constructor(private readonly logger: Logger) {
-  }
+  constructor(private readonly logger: Logger) {}
 
   updateContext(context?: string) {
     if (context && context.length > 0) {
@@ -60,7 +59,7 @@ export class Log4jsLogger implements LoggerService {
   // But log4js use async logging clustering to print log `clustering.send(loggingEvent);`
   // to maintain the same behavior as nestjs logging, there should use error level
   printStackTrace(stackTrace?: string) {
-    if(!stackTrace) {
+    if (!stackTrace) {
       return;
     }
     this.logger.error(stackTrace);
