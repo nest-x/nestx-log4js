@@ -128,6 +128,7 @@ describe('@nestx-log4js module', () => {
     logger.log('test logger logging powered by log4js');
     logger.warn('test logger logging powered by log4js');
     logger.error('test logger logging powered by log4js');
+    logger.error('test logger logging powered by log4js', 'error trace')
 
     const log4jsModule = module.get(Log4jsModule);
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
