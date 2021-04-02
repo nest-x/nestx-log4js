@@ -36,8 +36,7 @@ export class Log4jsLogger implements LoggerService {
 
   error(message: any, trace?: string, context?: string) {
     this.updateContext(context);
-    this.logger.error(message);
-    this.printStackTrace(trace);
+    this.logger.error(message, trace);
   }
 
   static getTimestamp() {
@@ -54,15 +53,5 @@ export class Log4jsLogger implements LoggerService {
 
   getTimestamp() {
     return Log4jsLogger.getTimestamp();
-  }
-
-  // nestjs logging use `process['stdout' | ...].write(message) to print log
-  // But log4js use async logging clustering to print log `clustering.send(loggingEvent);`
-  // to maintain the same behavior as nestjs logging, there should use error level
-  printStackTrace(stackTrace?: string) {
-    if(!stackTrace) {
-      return;
-    }
-    this.logger.error(stackTrace);
   }
 }
