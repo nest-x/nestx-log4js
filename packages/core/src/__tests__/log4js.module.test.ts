@@ -128,7 +128,7 @@ describe('@nestx-log4js module', () => {
     logger.log('test logger logging powered by log4js');
     logger.warn('test logger logging powered by log4js');
     logger.error('test logger logging powered by log4js');
-    logger.error('test logger logging powered by log4js', '\n error log with trace')
+    logger.error('test logger logging powered by log4js', 'error log with trace');
 
     const log4jsModule = module.get(Log4jsModule);
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
@@ -137,6 +137,59 @@ describe('@nestx-log4js module', () => {
 
     done();
   });
+
+  it('# should support tracestack logging', async (done) => {
+    const module: TestingModule = await Test.createTestingModule({
+      imports: [
+        Log4jsModule.forRootAsync({
+          inject: [],
+          useFactory: () => ({
+            config: {
+              appenders: {
+                out: {
+                  type: 'file',
+                  filename: './logs/log-with-error-stack.log'
+                },
+                console: {
+                  type: 'stdout'
+                }
+              },
+              categories: {
+                default: {
+                  appenders: ['out', 'console'],
+                  level: 'info'
+                },
+                debug: {
+                  appenders: ['out', 'console'],
+                  level: 'debug'
+                }
+              }
+            }
+          })
+        })
+      ]
+    }).compile();
+
+    const app = module.createNestApplication();
+    await app.init();
+
+    const log4jsLogger = app.get(Log4jsLogger);
+    expect(log4jsLogger).toBeInstanceOf(Log4jsLogger);
+
+    app.useLogger(log4jsLogger);
+
+    const log4jsModule = module.get(Log4jsModule);
+    expect(log4jsModule).toBeInstanceOf(Log4jsModule);
+
+
+    const logger = new Logger('test-log4js-for-error-stack');
+    logger.error('will show error', (new Error).stack);
+
+    await app.close();
+
+    done();
+  });
+
 
   it('# should module defined with spec name', async (done) => {
     const module: TestingModule = await Test.createTestingModule({

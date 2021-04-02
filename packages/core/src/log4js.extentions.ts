@@ -8,7 +8,6 @@
 
 const STACK_REG = /at (?:(.+)\s+\()?(?:(.+?):(\d+)(?::(\d+))?|([^)]+))\)?/;
 
-
 export const parseNestModuleCallStack = (data, skipIdx = 7) => {
   const stackLines = data.stack.split('\n').slice(skipIdx);
   const lineMatch = STACK_REG.exec(stackLines[0]);

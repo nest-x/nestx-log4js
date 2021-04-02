@@ -1,14 +1,18 @@
 import * as log4js from 'log4js';
 import { FactoryProvider } from '@nestjs/common';
-import { getLog4jsLoggerToken, getLog4jsOptionsToken, Log4jsAsyncOptions, Log4jsOptions, Log4jsOptionsFactory } from './log4js.options';
+import {
+  getLog4jsLoggerToken,
+  getLog4jsOptionsToken,
+  Log4jsAsyncOptions,
+  Log4jsOptions,
+  Log4jsOptionsFactory
+} from './log4js.options';
 import { Type } from '@nestjs/common/interfaces/type.interface';
 import { Log4jsLogger } from './log4js.classes';
 import { parseNestModuleCallStack } from './log4js.extentions';
 
-
 export type Log4jsLoggerFactoryProvider = FactoryProvider<Log4jsLogger | Promise<Log4jsLogger>>;
 export type Log4jsOptionsFactoryProvider = FactoryProvider<Log4jsOptions | Promise<Log4jsOptions>>;
-
 
 export const createLog4jsLogger = (name: string): Log4jsLoggerFactoryProvider => ({
   provide: getLog4jsLoggerToken(name),
@@ -25,7 +29,6 @@ export const createLog4jsLogger = (name: string): Log4jsLoggerFactoryProvider =>
 });
 
 export const createAsyncLog4jsOptions = (options: Log4jsAsyncOptions): Log4jsOptionsFactoryProvider => {
-
   if (options.useFactory) {
     return {
       provide: getLog4jsOptionsToken(options.name),
@@ -43,7 +46,4 @@ export const createAsyncLog4jsOptions = (options: Log4jsAsyncOptions): Log4jsOpt
       return log4jsOptionsFactory.createLog4jsOptions();
     }
   };
-
 };
-
-
