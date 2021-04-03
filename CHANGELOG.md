@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/nest-x/nestx-log4js/compare/v1.4.0...v1.5.0) (2021-04-03)
+
+
+### Features
+
+* support error trace ([#452](https://github.com/nest-x/nestx-log4js/issues/452)) ([a16cbef](https://github.com/nest-x/nestx-log4js/commit/a16cbef8db6b9cf0187dbc72eeb2d33110cc4c56))
+
 # [1.4.0](https://github.com/nest-x/nestx-log4js/compare/v1.3.12...v1.4.0) (2021-03-31)
 
 
