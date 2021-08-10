@@ -41,7 +41,7 @@
     "@nestjs/core": "7.6.18",
     "@nestjs/schematics": "8.0.2",
     "@nestjs/testing": "7.6.18",
-    "@types/jest": "26.0.24",
+    "@types/jest": "27.0.0",
     "@types/node": "14.17.9",
     "jest": "26.6.3",
     "proxyquire": "2.1.3",
