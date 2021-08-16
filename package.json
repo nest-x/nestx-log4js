@@ -39,7 +39,7 @@
     "jest": "26.6.3",
     "lerna": "4.0.0",
     "prettier": "2.3.2",
-    "semantic-release": "17.4.4",
+    "semantic-release": "17.4.5",
     "sinon": "11.1.2",
     "supertest": "6.1.5",
     "ts-jest": "26.5.6",
