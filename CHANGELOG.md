@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/nest-x/nestx-log4js/compare/v1.5.0...v1.5.1) (2022-01-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency log4js to v6.4.0 [security] ([6b8e11c](https://github.com/nest-x/nestx-log4js/commit/6b8e11c2003e6ace33b3ffb63c08e9c8ccb95fec))
+
 # [1.5.0](https://github.com/nest-x/nestx-log4js/compare/v1.4.0...v1.5.0) (2021-04-03)
 
 

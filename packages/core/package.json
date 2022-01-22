@@ -1,6 +1,6 @@
 {
   "name": "@nestx-log4js/core",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "nestx-log4js core module",
   "author": "aquariuslt <superaquariuslt@gmail.com>",
   "homepage": "https://github.com/nest-x/nestx-log4js#readme",
