@@ -39,7 +39,7 @@
     "@nestjs/cli": "7.6.0",
     "@nestjs/common": "7.6.18",
     "@nestjs/core": "7.6.18",
-    "@nestjs/schematics": "8.0.5",
+    "@nestjs/schematics": "8.0.6",
     "@nestjs/testing": "7.6.18",
     "@types/jest": "27.4.0",
     "@types/node": "16.11.22",
