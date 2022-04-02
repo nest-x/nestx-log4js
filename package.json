@@ -38,7 +38,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "jest": "26.6.3",
     "lerna": "4.0.0",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "semantic-release": "19.0.2",
     "sinon": "13.0.1",
     "supertest": "6.2.2",
