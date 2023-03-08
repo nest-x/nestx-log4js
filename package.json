@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nestjs/common": "8.4.7",
-    "@nestjs/core": "8.4.7",
+    "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "8.4.7",
     "reflect-metadata": "0.1.13",
     "rimraf": "4.3.1",
