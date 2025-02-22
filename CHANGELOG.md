@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/nest-x/nestx-log4js/compare/v1.5.2...v1.5.3) (2025-02-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rxjs to v7.8.2 ([#1315](https://github.com/nest-x/nestx-log4js/issues/1315)) ([5b8a76b](https://github.com/nest-x/nestx-log4js/commit/5b8a76b4743b5074e017cbf82504714aba69b5ff))
+
 ## [1.5.2](https://github.com/nest-x/nestx-log4js/compare/v1.5.1...v1.5.2) (2023-03-16)
 
 

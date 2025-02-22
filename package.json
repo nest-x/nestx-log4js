@@ -1,6 +1,6 @@
 {
   "name": "nestx-log4js",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
