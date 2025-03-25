@@ -29,7 +29,7 @@
     "@types/express": "5.0.1",
     "@types/jest": "27.5.2",
     "@types/node": "22.13.13",
-    "@types/supertest": "6.0.2",
+    "@types/supertest": "6.0.3",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "eslint": "8.57.1",
