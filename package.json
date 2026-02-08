@@ -12,7 +12,7 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "@nestjs/common": "8.4.7",
+    "@nestjs/common": "10.4.16",
     "@nestjs/core": "9.0.5",
     "@nestjs/platform-express": "8.4.7",
     "reflect-metadata": "0.2.2",
