@@ -13,15 +13,15 @@
   },
   "dependencies": {
     "@nestjs/common": "8.4.7",
-    "@nestjs/core": "9.0.5",
+    "@nestjs/core": "9.4.3",
     "@nestjs/platform-express": "8.4.7",
     "reflect-metadata": "0.2.2",
     "rimraf": "5.0.10",
     "rxjs": "7.8.2"
   },
   "devDependencies": {
-    "@nestjs/cli": "9.4.2",
-    "@nestjs/schematics": "9.0.4",
+    "@nestjs/cli": "9.5.0",
+    "@nestjs/schematics": "9.2.0",
     "@nestjs/testing": "8.4.7",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",
