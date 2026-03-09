@@ -7,11 +7,11 @@ import * as log4js from 'log4js';
 import { Configuration, LoggingEvent } from 'log4js';
 
 describe('log4js usage', () => {
-  afterEach(async (done) => {
+  afterEach(async () => {
     // waiting for log4js worker process shutdown
     // we should support graceful shutdown in nestjs/cloud-native project
-    log4js.shutdown(() => {
-      done();
+    await new Promise<void>((resolve) => {
+      log4js.shutdown(() => resolve());
     });
   });
 

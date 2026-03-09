@@ -8,7 +8,7 @@ import { getLog4jsLoggerToken, getLog4jsOptionsToken } from '../log4js.options';
 import { parseNestModuleCallStack } from '../log4js.extentions';
 
 describe('@nestx-log4js module', () => {
-  it('# should module define with sync-and-empty options correctly', async (done) => {
+  it('# should module define with sync-and-empty options correctly', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [Log4jsModule.forRoot()]
     }).compile();
@@ -31,10 +31,9 @@ describe('@nestx-log4js module', () => {
     expect(log4jsOptions).toBeDefined();
 
     await app.close();
-    done();
   });
 
-  it('# should module define with sync options correctly', async (done) => {
+  it('# should module define with sync options correctly', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRoot({
@@ -78,11 +77,9 @@ describe('@nestx-log4js module', () => {
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
 
     await app.close();
-
-    done();
   });
 
-  it('# should module defined with async options', async (done) => {
+  it('# should module defined with async options', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRootAsync({
@@ -134,11 +131,9 @@ describe('@nestx-log4js module', () => {
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
 
     await app.close();
-
-    done();
   });
 
-  it('# should support tracestack logging', async (done) => {
+  it('# should support tracestack logging', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRootAsync({
@@ -181,17 +176,13 @@ describe('@nestx-log4js module', () => {
     const log4jsModule = module.get(Log4jsModule);
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
 
-
     const logger = new Logger('test-log4js-for-error-stack');
     logger.error('will show error', (new Error).stack);
 
     await app.close();
-
-    done();
   });
 
-
-  it('# should module defined with spec name', async (done) => {
+  it('# should module defined with spec name', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         Log4jsModule.forRoot({
@@ -235,11 +226,9 @@ describe('@nestx-log4js module', () => {
     expect(log4jsModule).toBeInstanceOf(Log4jsModule);
 
     await app.close();
-
-    done();
   });
 
-  it('# should use nestjs context display as category field', async (done) => {
+  it('# should use nestjs context display as category field', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [Log4jsModule.forRoot()]
     }).compile();
@@ -259,10 +248,9 @@ describe('@nestx-log4js module', () => {
     unnamedLogger.log('log using none as category');
 
     await app.close();
-    done();
   });
 
-  it('# should support undefined context', async (done) => {
+  it('# should support undefined context', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [Log4jsModule.forRoot()]
     }).compile();
@@ -282,10 +270,9 @@ describe('@nestx-log4js module', () => {
     unnamedLogger.debug('log using none as category');
 
     await app.close();
-    done();
   });
 
-  it('# should support file depth in callstack parsing', async (done) => {
+  it('# should support file depth in callstack parsing', () => {
     const data = {
       stack:
         'Error: \n' +
@@ -307,11 +294,9 @@ describe('@nestx-log4js module', () => {
     const customStackLineResult = parseNestModuleCallStack(data, 4);
 
     expect(customStackLineResult.fileName).toEqual('/ci/workspace/nestx-log4js/packages/core/src/log4js.classes.ts');
-
-    done();
   });
 
-  it('# should have `getTimestamp` function property', async (done) => {
+  it('# should have `getTimestamp` function property', async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [Log4jsModule.forRoot()]
     }).compile();
@@ -326,7 +311,5 @@ describe('@nestx-log4js module', () => {
 
     expect(log4jsLogger).toHaveProperty('getTimestamp');
     expect(Log4jsLogger.getTimestamp).not.toBeUndefined();
-
-    done();
   });
 });
