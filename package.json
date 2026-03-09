@@ -9,7 +9,7 @@
     "test:cov": "jest --coverage",
     "build": "pnpm -r run build",
     "changeset": "changeset",
-    "version": "changeset version",
+    "cs:version": "changeset version",
     "release": "pnpm build && changeset publish --access public"
   },
   "devDependencies": {

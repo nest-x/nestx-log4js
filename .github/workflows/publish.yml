@@ -26,6 +26,8 @@ jobs:
           node-version: 22
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
+      - name: Upgrade npm for OIDC trusted publishing
+        run: npm install -g npm@latest
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
@@ -34,6 +36,6 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm release
-          version: pnpm version
+          version: pnpm changeset version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
