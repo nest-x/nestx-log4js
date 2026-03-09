@@ -10,7 +10,7 @@
     "build": "pnpm -r run build",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
