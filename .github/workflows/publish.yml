@@ -5,26 +5,30 @@ on:
     branches:
       - master
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
-  publish-npm:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - name: SCM
-        uses: actions/checkout@v2
-      - name: Setup Node Environment
-        uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
-      - name: Install Dependencies and Build
-        run: |
-          yarn
-          yarn bootstrap
-          yarn build
-      - name: Semantic Release
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-          yarn release
+          node-version: 22
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm build
+      - name: Create Release PR or Publish
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          version: pnpm version
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

@@ -1,30 +1,18 @@
-import type { Config } from '@jest/types';
+import type { Config } from 'jest';
 
-const rootJestConfig: Config.InitialOptions = {
-  moduleFileExtensions: [
-    'ts',
-    'js',
-    'json'
-  ],
+const config: Config = {
+  moduleFileExtensions: ['ts', 'js', 'json'],
   transform: {
-    '^.+\\.(t|j)s$': 'ts-jest'
+    '^.+\\.ts$': 'ts-jest',
   },
   collectCoverageFrom: [
-    '<rootDir>/src/*.ts',
-    '!<rootDir>/src/__tests__/**/*.ts',
-    '!<rootDir>/src/shared/**/*.ts',
-    '!<rootDir>/src/index.ts',
     '<rootDir>/packages/*/src/*.ts',
     '!<rootDir>/packages/*/src/__tests__/**/*.ts',
-    '!<rootDir>/packages/*/src/shared/**/*.ts',
-    '!<rootDir>/packages/*/src/index.ts'
+    '!<rootDir>/packages/*/src/index.ts',
   ],
-  testMatch: [
-    '<rootDir>/src/**/*.test.ts',
-    '<rootDir>/packages/*/src/**/*.test.ts'
-  ],
+  testMatch: ['<rootDir>/packages/*/src/**/*.test.ts'],
   testEnvironment: 'node',
-  coverageDirectory: '<rootDir>/reports/coverage'
+  coverageDirectory: '<rootDir>/reports/coverage',
 };
 
-export default rootJestConfig;
+export default config;
