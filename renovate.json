@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "semanticCommits": "enabled",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "groupName": "NestJS",
+      "matchPackagePatterns": ["^@nestjs/"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "groupName": "ESLint",
+      "matchPackagePatterns": ["eslint", "typescript-eslint"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "groupName": "Jest",
+      "matchPackagePatterns": ["jest", "ts-jest", "@types/jest"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
