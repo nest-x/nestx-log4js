@@ -64,7 +64,7 @@ importers:
         version: 7.8.2
       sinon:
         specifier: ^21.0.0
-        version: 21.0.3
+        version: 21.1.0
       supertest:
         specifier: ^7.0.0
         version: 7.2.2
@@ -671,11 +671,11 @@ packages:
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
 
-  '@sinonjs/fake-timers@15.1.1':
-    resolution: {integrity: sha512-cO5W33JgAPbOh07tvZjUOJ7oWhtaqGHiZw+11DPbyqh2kHTBc3eF/CjJDeQ4205RLQsX6rxCuYOroFQwl7JDRw==}
+  '@sinonjs/fake-timers@15.3.0':
+    resolution: {integrity: sha512-m2xozxSfCIxjDdvbhIWazlP2i2aha/iUmbl94alpsIbd3iLTfeXgfBVbwyWogB6l++istyGZqamgA/EcqYf+Bg==}
 
-  '@sinonjs/samsam@9.0.3':
-    resolution: {integrity: sha512-ZgYY7Dc2RW+OUdnZ1DEHg00lhRt+9BjymPKHog4PRFzr1U3MbK57+djmscWyKxzO1qfunHqs4N45WWyKIFKpiQ==}
+  '@sinonjs/samsam@10.0.1':
+    resolution: {integrity: sha512-q2mHXfkviqX+roGbzFJF6r5GR4TJDGngJuPrtj0IZRZZGnFlYTjdeoiZ6vCISmOjTLsZm0+CqHPupXR/BRVZjA==}
 
   '@tokenizer/inflate@0.4.1':
     resolution: {integrity: sha512-2mAv+8pkG6GIZiF1kNg1jAjh27IDxEPKwdGul3snfztFerfPGI1LjDezZp3i7BElXompqEtPmoPx6c2wgtWsOA==}
@@ -1269,8 +1269,8 @@ packages:
     resolution: {integrity: sha512-X07nttJQkwkfKfvTPG/KSnE2OMdcUCao6+eXF3wmnIQRn2aPAHH3VxDbDOdegkd6JbPsXqShpvEOHfAT+nCNwQ==}
     engines: {node: '>=0.3.1'}
 
-  diff@8.0.3:
-    resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
+  diff@8.0.4:
+    resolution: {integrity: sha512-DPi0FmjiSU5EvQV0++GFDOJ9ASQUVFh5kD+OzOnYdi7n3Wpm9hWWGfB/O2blfHcMVTL5WkQXSnRiK9makhrcnw==}
     engines: {node: '>=0.3.1'}
 
   dir-glob@3.0.1:
@@ -2347,8 +2347,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  sinon@21.0.3:
-    resolution: {integrity: sha512-0x8TQFr8EjADhSME01u1ZK31yv2+bd6Z5NrBCHVM+n4qL1wFqbxftmeyi3bwlr49FbbzRfrqSFOpyHCOh/YmYA==}
+  sinon@21.1.0:
+    resolution: {integrity: sha512-eyGgN8TGu8LZ3cNFatmeK+kM3T3ZjxZ+742ua4wMcm1yK6AQoQVibm2HnM+b1DT/a5ErAtmYL0R0c4ooDEcqNQ==}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -2437,6 +2437,10 @@ packages:
   supertest@7.2.2:
     resolution: {integrity: sha512-oK8WG9diS3DlhdUkcFn4tkNIiIbBx9lI2ClF8K+b2/m8Eyv47LSawxUzZQSNKUrVb2KsqeTDCcjAAVPYaSLVTA==}
     engines: {node: '>=14.18.0'}
+
+  supports-color@10.2.2:
+    resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
+    engines: {node: '>=18'}
 
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
@@ -3179,7 +3183,7 @@ snapshots:
   '@jest/fake-timers@30.3.0':
     dependencies:
       '@jest/types': 30.3.0
-      '@sinonjs/fake-timers': 15.1.1
+      '@sinonjs/fake-timers': 15.3.0
       '@types/node': 22.19.17
       jest-message-util: 30.3.0
       jest-mock: 30.3.0
@@ -3466,11 +3470,11 @@ snapshots:
     dependencies:
       type-detect: 4.0.8
 
-  '@sinonjs/fake-timers@15.1.1':
+  '@sinonjs/fake-timers@15.3.0':
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@sinonjs/samsam@9.0.3':
+  '@sinonjs/samsam@10.0.1':
     dependencies:
       '@sinonjs/commons': 3.0.1
       type-detect: 4.1.0
@@ -4052,7 +4056,7 @@ snapshots:
 
   diff@4.0.4: {}
 
-  diff@8.0.3: {}
+  diff@8.0.4: {}
 
   dir-glob@3.0.1:
     dependencies:
@@ -5343,13 +5347,13 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  sinon@21.0.3:
+  sinon@21.1.0:
     dependencies:
       '@sinonjs/commons': 3.0.1
-      '@sinonjs/fake-timers': 15.1.1
-      '@sinonjs/samsam': 9.0.3
-      diff: 8.0.3
-      supports-color: 7.2.0
+      '@sinonjs/fake-timers': 15.3.0
+      '@sinonjs/samsam': 10.0.1
+      diff: 8.0.4
+      supports-color: 10.2.2
 
   slash@3.0.0: {}
 
@@ -5449,6 +5453,8 @@ snapshots:
       superagent: 10.3.0
     transitivePeerDependencies:
       - supports-color
+
+  supports-color@10.2.2: {}
 
   supports-color@7.2.0:
     dependencies:
